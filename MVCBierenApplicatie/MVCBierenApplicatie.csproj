@@ -154,6 +154,9 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Bier.cs" />
+    <Compile Include="Models\BierenService.cs" />
+    <Compile Include="Models\Geslacht.cs" />
+    <Compile Include="Models\Persoon.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -201,6 +204,9 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Bier\bieren.cshtml" />
     <Content Include="Views\Shared\DisplayTemplates\Kleuren.cshtml" />
+    <Content Include="Views\Bier\Verwijderd.cshtml" />
+    <Content Include="Views\Bier\Index.cshtml" />
+    <Content Include="Views\Bier\Verwijderen.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

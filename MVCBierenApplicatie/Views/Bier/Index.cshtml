@@ -1,0 +1,13 @@
+﻿@model List<MVCBierenApplicatie.Models.Bier>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h3>Alle bieren</h3>
+@foreach (var bier in Model)
+{
+    var url = "Verwijderen/" + bier.ID;
+
+    <li>@Html.DisplayFor(m => bier.ID) @bier.Naam @Html.DisplayFor(m => bier.Alcohol) <a href="@url"><img alt="verwijderen" src="~/images/delete.png" /></a></li>
+}
