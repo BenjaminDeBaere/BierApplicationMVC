@@ -1,0 +1,15 @@
+﻿@model MVCBierenApplicatie.Models.Bier
+
+@{
+    ViewBag.Title="Toevoegen";
+}
+
+<h2>Bier toevegen</h2>
+@using (Html.BeginForm())
+{
+    @Html.EditorForModel()
+    <input type="submit" value="toevoegen"/>
+    @Html.ValidationSummary()
+}
+
+

@@ -24,6 +24,36 @@ textarea {
 }
 
 .green{color:green;}
-.yellow{color:yellow;}
+.yellow{color:goldenrod;}
 .orange{color:orange;}
 .red{color:red;}
+
+th,td{
+    padding:10px 25px;
+}
+
+.field-validation-error
+{
+    color: #ff0000;
+}
+
+.field-validation-valid
+{
+    display:none;
+}
+
+.input-validation-error
+{
+    border: 1px solid #ff0000
+
+}
+
+.validation-summary-errors
+{
+    font-weight: bold;
+    color: #ff0000;
+}
+
+.validation-summary-valid{
+    display:none;
+}

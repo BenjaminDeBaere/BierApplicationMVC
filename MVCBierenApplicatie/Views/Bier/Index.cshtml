@@ -5,9 +5,30 @@
 }
 
 <h3>Alle bieren</h3>
-@foreach (var bier in Model)
-{
-    var url = "Verwijderen/" + bier.ID;
 
-    <li>@Html.DisplayFor(m => bier.ID) @bier.Naam @Html.DisplayFor(m => bier.Alcohol) <a href="@url"><img alt="verwijderen" src="~/images/delete.png" /></a></li>
-}
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Naam</th>
+            <th>Alcohol</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var bier in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(m => bier.ID)</td>
+                <td>@Html.DisplayFor(m => bier.Naam)</td>
+                <td>@Html.DisplayFor(m => bier.Alcohol)</td>
+                <td><a href='@Url.Action("Verwijderen", "bier", new { ID = bier.ID } )'><img alt="verwijderen" src="~/images/delete.png" /></a></td>
+                
+            </tr>
+        }
+
+    </tbody>
+
+
+</table>
+@Html.ActionLink("Bier Toevoegen", "Toevoegen", "Bier", null, new { @class="btn btn-primary"})
+

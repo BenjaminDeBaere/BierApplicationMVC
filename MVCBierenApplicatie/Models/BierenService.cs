@@ -13,7 +13,7 @@ namespace MVCBierenApplicatie.Models
         {
             bieren [1] = new Bier { ID = 1, Naam = "Stella Artois", Alcohol = 15F };
             bieren [2] = new Bier { ID = 2, Naam = "Heineken", Alcohol = 0.02F };
-            bieren [3] = new Bier { ID = 10, Naam = "Carlsberg", Alcohol = 5F };
+            bieren [3] = new Bier { ID = 3, Naam = "Carlsberg", Alcohol = 5F };
         }
 
         public List<Bier> FindAll()
@@ -28,6 +28,12 @@ namespace MVCBierenApplicatie.Models
         public void Delete(int id)
         {
             bieren.Remove(id);
+        }
+
+        public void Add(Bier b)
+        {
+            b.ID = bieren.Keys.Max() + 1;
+            bieren.Add(b.ID, b);
         }
     }
 }
